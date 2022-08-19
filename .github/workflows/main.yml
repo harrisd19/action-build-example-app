@@ -14,3 +14,5 @@ jobs:
         with:
           directory-input: 'dist2'
           args: -v dist2/:/usr/src/app/dist/
+      - name: check-folder
+        run: ls /usr/src/app/
