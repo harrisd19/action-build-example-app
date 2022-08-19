@@ -7,10 +7,16 @@ jobs:
     steps:
       - name: Checkout
         id: checkout-folder
-        run: mkdir -p dist
+        run: mkdir -p dist2
       - name: Hello world action step
         id: hello
+<<<<<<< Updated upstream
         uses: harrisd19/docker-it-up@v12
+=======
+        uses: harrisd19/docker-it-up@v11
+>>>>>>> Stashed changes
         with:
-          directory-input: 'dist'
-          args: -v dist/:/usr/src/app/dist/
+          directory-input: 'dist2'
+          args: -v dist2/:/usr/src/app/dist/
+        run: ls /usr/src/app/
+        
