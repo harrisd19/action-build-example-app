@@ -13,3 +13,4 @@ jobs:
         uses: harrisd19/docker-it-up@v11
         with:
           directory-input: 'dist'
+          options: -v dist/:/usr/src/app/dist/
