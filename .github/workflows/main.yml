@@ -11,7 +11,6 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: harrisd19/docker-it-up@v12
-        image: 
         with:
           directory-input: 'dist'
           args: -v dist/:/usr/src/app/dist/
