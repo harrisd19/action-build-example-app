@@ -10,7 +10,7 @@ jobs:
         run: mkdir -p dist2
       - name: Hello world action step
         id: hello
-        uses: harrisd19/docker-it-up@v12
+        uses: harrisd19/docker-it-up@v13
         with:
           directory-input: 'dist2'
           args: -v dist2/:/usr/src/app/dist/
