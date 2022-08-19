@@ -7,14 +7,10 @@ jobs:
     steps:
       - name: Checkout
         id: checkout-folder
-        uses: actions/checkout@v2
-        run: | 
-        mkdir -p dist
+        run: mkdir -p dist
       - name: Hello world action step
         id: hello
         uses: harrisd19/docker-it-up@v8
         with:
           directory-input: 'dist'
-        volumes:
-          - dist
 
