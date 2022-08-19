@@ -10,7 +10,7 @@ jobs:
         run: mkdir -p dist
       - name: Hello world action step
         id: hello
-        uses: harrisd19/docker-it-up@v11
+        uses: harrisd19/docker-it-up@v12
         with:
           directory-input: 'dist'
           options: -v dist/:/usr/src/app/dist/
