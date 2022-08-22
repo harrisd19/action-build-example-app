@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Add folder
         id: add-folder
-        run: mkdir -p dist2
+        run: mkdir -p dist2 \ pwd
       - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v16
