@@ -10,6 +10,7 @@ jobs:
         run: |
             mkdir -p dist2
             ls -la
+            pwd
       - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v16
