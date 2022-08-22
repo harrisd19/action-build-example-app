@@ -10,10 +10,6 @@ jobs:
         run: mkdir -p dist2
       - name: Run docker-it-up action
         id: action
-<<<<<<< Updated upstream
-        uses: harrisd19/docker-it-up@v15
-=======
         uses: harrisd19/docker-it-up@v16
->>>>>>> Stashed changes
         with:
           directory-input: 'dist2'
