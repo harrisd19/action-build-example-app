@@ -10,6 +10,6 @@ jobs:
         run: mkdir -p dist2
       - name: Run docker-it-up action
         id: action
-        uses: harrisd19/docker-it-up@v13
+        uses: harrisd19/docker-it-up@v14
         with:
           directory-input: 'dist2'
