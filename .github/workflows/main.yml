@@ -8,12 +8,8 @@ jobs:
       - name: Add folder
         id: add-folder
         run: mkdir -p dist2
-      - name: run docker-it-up action
+      - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v13
-        runs:
-          using: 'docker'
-          image: 'Dockerfile'
-          args:
-            - --volume ${{ github.workspace }}/dist2:/usr/src/app/dist2/
-            - ls -la /usr/src/app/
+        with:
+          directory-input: 'dist2'
