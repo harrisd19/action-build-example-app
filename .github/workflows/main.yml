@@ -11,8 +11,16 @@ jobs:
             mkdir -p dist2
             ls -la
             pwd
-      - name: Run docker-it-up action
-        id: action
-        uses: harrisd19/docker-it-up@v26
-        with:
+    name: a container action
+    container:
+      image: ghcr.io/harrisd19/docker-it-up:v28
+      volumes:
+        - /home/runner/work/action-build-example-app/action-build-example-app/dist2:/usr/src/app/dist2
+      with:
           directory-input: 'dist2'
+      
+      # - name: Run docker-it-up action
+      #   id: action
+      #   uses: harrisd19/docker-it-up@v26
+      #   with:
+      #     directory-input: 'dist2'
