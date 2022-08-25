@@ -9,7 +9,7 @@ jobs:
         id: add-folder
         run: |
            mkdir -p dist123
-           echo 'this is a file' > dist/mytext.txt
+           echo 'this is a file' > dist123/mytext.txt
       - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v32
