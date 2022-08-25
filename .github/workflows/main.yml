@@ -10,7 +10,7 @@ jobs:
         run: |
            mkdir -p dist123
            echo 'this is a file' > dist123/mytext.txt
-           echo $INPUT_CONIFG
+           echo $HOME
       - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v37
