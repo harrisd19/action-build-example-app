@@ -11,6 +11,8 @@ jobs:
            mkdir -p dist123
            echo 'this is a file' > dist123/mytext.txt
            echo $HOME
+           echo $USER
+           echo $INPUT_CONFIG
       - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v38
