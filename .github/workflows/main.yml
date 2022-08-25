@@ -5,17 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - name: Add folder
-         id: add-folder
-         run:|
-             mkdir -p dist2
-             ls -la
-             pwd
+      - name: Add folder
+        id: add-folder
+        run: |
+           mkdir -p dist2
       - name: Run docker-it-up action
         id: action
         uses: harrisd19/docker-it-up@v32
         with:
-          directory-input: 'dist2'
+          directory-input: 'dist123'
 
 
 # on: [push]
