@@ -13,7 +13,7 @@ jobs:
 #             pwd
       - name: Run docker-it-up action
         id: action
-        uses: harrisd19/docker-it-up@v30
+        uses: harrisd19/docker-it-up@v31
         with:
           directory-input: 'dist2'
 
