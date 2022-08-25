@@ -12,7 +12,7 @@ jobs:
            echo 'this is a file' > dist123/mytext.txt
       - name: Run docker-it-up action
         id: action
-        uses: harrisd19/docker-it-up@v35
+        uses: harrisd19/docker-it-up@v36
         with:
           directory-input: 'dist123'
 
