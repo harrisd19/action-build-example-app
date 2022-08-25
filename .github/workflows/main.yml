@@ -13,7 +13,7 @@ jobs:
         id: action
         uses: harrisd19/docker-it-up@v31
         with:
-          directory-input: 'dist2'
+          directory-input: 'dist123'
 
 
 # on: [push]
