@@ -9,6 +9,7 @@ jobs:
         run: |
            mkdir -p dist123
            echo 'this is a file' > dist123/mytext.txt
+           pwd
            echo $HOME
            echo $USER
            echo $INPUT_CONFIG
