@@ -14,10 +14,10 @@ jobs:
            echo $USER
            echo $INPUT_CONFIG
       - name: Run docker-it-up action
-        id: action
-        uses: harrisd19/docker-it-up@v38
-        with:
-          directory-input: 'dist123'
+          container:
+            image: image: ghcr.io/harrisd19/docker-it-up:v38
+            with:
+              directory-input: 'dist123'
 
 
 # on: [push]
