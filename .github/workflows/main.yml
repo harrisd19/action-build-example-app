@@ -12,11 +12,17 @@ jobs:
            echo $HOME
            echo $USER
            echo $INPUT_CONFIG
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: harrisd19/docker-it-up
+          token: ${{ secrets.ACTION_PAT }}
       - name: Run docker-it-up action
         id: action
-        uses: harrisd19/docker-it-up@v38
+        uses: ./
         with:
           directory-input: 'dist123'
+
 # on: [push]
 # jobs:
 #   hello_world_job:
