@@ -1,45 +1,34 @@
-# on: [push]
-
-# jobs:
-#   hello_world_job:
-#     runs-on: ubuntu-latest
-#     name: A job to say hello
-#     steps:
-#       - name: Add folder
-#         id: add-folder
-#         run: |
-#            mkdir -p dist123
-#            echo 'this is a file' > dist123/mytext.txt
-#            echo $HOME
-#            echo $USER
-#            echo $INPUT_CONFIG
-#       - name: Run docker-it-up action
-#           container:
-#             image: image: ghcr.io/harrisd19/docker-it-up:v38
-#             with:
-#               directory-input: 'dist123'
-
-
 on: [push]
-
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
-#     needs: [folder_job]
-    container:
-      image: ghcr.io/harrisd19/docker-it-up:v38
-#       volumes:
-#         -${{GITHUB_WORKSPACE}}/dist2:/usr/src/app/dist2
-        # - /home/runner/work/action-build-example-app/action-build-example-app/dist2:/usr/src/app/dist2
-#       with:
-#           directory-input: 'dist2'
-#   folder_job:
+    steps:
+      - name: Add folder
+        id: add-folder
+        run: |
+           mkdir -p dist123
+           echo 'this is a file' > dist123/mytext.txt
+           echo $HOME
+           echo $USER
+           echo $INPUT_CONFIG
+      - name: Run docker-it-up action
+        id: action
+        uses: harrisd19/docker-it-up@v38
+        with:
+          directory-input: 'dist123'
+# on: [push]
+# jobs:
+#   hello_world_job:
 #     runs-on: ubuntu-latest
-#       steps:
-#         - name: Add folder
-#           id: add-folder
-#           run: |
-#             mkdir -p dist2
-#             ls -la
-#             pwd
+#     name: A job to say hello
+#     #needs: [folder_job]
+#   #   container:
+#   #     image: ghcr.io/harrisd19/docker-it-up:v28
+#   #     volumes:
+#   #       -${{GITHUB_WORKSPACE}}/dist2:/usr/src/app/dist2
+#   #       # - /home/runner/work/action-build-example-app/action-build-example-app/dist2:/usr/src/app/dist2
+#   #     with:
+#   #         directory-input: 'dist2'
+#   # folder_job:
+#   #   runs-on: ubuntu-latest
