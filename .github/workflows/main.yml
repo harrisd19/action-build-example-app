@@ -9,21 +9,40 @@ jobs:
         run: |
            mkdir -p dist123
            echo 'this is a file' > dist123/mytext.txt
-           pwd
-           ls -la
            echo $HOME
            echo $USER
            echo $INPUT_CONFIG
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          repository: harrisd19/docker-it-up
-          token: ${{ secrets.ACTION_PAT }}
       - name: Run docker-it-up action
         id: action
-        uses: ./
+        uses: harrisd19/docker-it-up@v38
         with:
           directory-input: 'dist123'
+# on: [push]
+# jobs:
+#   hello_world_job:
+#     runs-on: ubuntu-latest
+#     name: A job to say hello
+#     steps:
+#       - name: Add folder
+#         id: add-folder
+#         run: |
+#            mkdir -p dist123
+#            echo 'this is a file' > dist123/mytext.txt
+#            pwd
+#            ls -la
+#            echo $HOME
+#            echo $USER
+#            echo $INPUT_CONFIG
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#         with:
+#           repository: harrisd19/docker-it-up
+#           token: ${{ secrets.ACTION_PAT }}
+#       - name: Run docker-it-up action
+#         id: action
+#         uses: ./
+#         with:
+#           directory-input: 'dist123'
 
 # on: [push]
 # jobs:
